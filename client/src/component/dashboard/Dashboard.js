@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getCurrentProfile } from '../../actions/profile'
+import Spinner from '../layout/Spinner'
 
-const Dashboard = ({ getCurrentProfile, auth, profile}) => {
+const Dashboard = ({ getCurrentProfile, auth: {user}, profile: {profile, loading}}) => {
     
     useEffect( () => { getCurrentProfile() }, [getCurrentProfile])
 
-    return (
-        <div>
-            Dashboard
-        </div>
-    )
+    return loading && profile === null ? <Spinner /> : <Fragment>
+        <h1 className="large text-primary">dashboard</h1>
+        <p className="lead"><i className="fas fa-user"></i> Welcome {user && user.name}</p>
+        {profile !== null ? <Fragment>has</Fragment> : <Fragment>
+           <p>you have not yet setup a profile, please add some info</p>
+            <Link to='/create-profile' className="btn btn-primary my-1">
+                Create profile
+            </Link>
+            </Fragment>}
+    </Fragment>
 }
 
 Dashboard.propTypes = {
