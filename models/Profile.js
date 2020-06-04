@@ -18,11 +18,11 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    skils: {
+    skills: {
         type: [String],
         required: true
     },
-    bio: {
+    bio: {  
         type: String
     },
     githubusername: {
