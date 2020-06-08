@@ -9,7 +9,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
 
     useEffect(() => {
         getProfiles()
-    }, [])
+    }, [getProfiles])
 
     return (
         <Fragment>
@@ -31,7 +31,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
 }
 
 Profiles.propTypes = {
-
+    profile: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
