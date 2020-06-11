@@ -1,7 +1,7 @@
 {
   "name": "mern-course",
   "version": "1.0.0",
-  "engines" : { "node" : "0.12.16.3" },
+  "engines" : { "node" : "0.12" },
   "description": "social network for developpers",
   "main": "server.js",
   "scripts": {
