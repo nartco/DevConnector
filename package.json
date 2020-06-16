@@ -1,10 +1,14 @@
 {
   "name": "mern-course",
   "version": "1.0.0",
+<<<<<<< HEAD
   "engines": {
     "node": "12.16.3",
     "npm": "6.14.4"
   },
+=======
+  "engines" : { "node" : "12.16.3", "npm": "6.14.4" },
+>>>>>>> 5ceb174a389734cbe3c9f2cf83dc5d2285ab7b52
   "description": "social network for developpers",
   "main": "server.js",
   "scripts": {
@@ -12,7 +16,11 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "PM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+<<<<<<< HEAD
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+=======
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+>>>>>>> 5ceb174a389734cbe3c9f2cf83dc5d2285ab7b52
   },
   "author": "sebastien",
   "license": "MIT",
